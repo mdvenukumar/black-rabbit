@@ -5,9 +5,9 @@ import requests
 from bs4 import BeautifulSoup
 
 # API keys and configurations (consider using environment variables for security)
-DEFAULT_GEMINI_API_KEY = "AIzaSyAmm7Dvr2Rr6DbNUo4bV5bCWDYWSU2k3Sg"
+DEFAULT_GEMINI_API_KEY = st.secrets["GEMINI"]
 
-TAVILY_API_KEY = "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"
+TAVILY_API_KEY = st.secrets["TAVILY"]
 
 # Initialize clients
 genai.configure(api_key=DEFAULT_GEMINI_API_KEY)
