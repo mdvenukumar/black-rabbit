@@ -130,6 +130,12 @@ def main():
 
     st.sidebar.title("ℹ️ About")
     st.sidebar.info("Strangled by research?  Black Rabbit  hacks the web, feeding your creativity with AI-powered insights. Craft fire content. Less time, more BOOM.")
-
+    hide_streamlit_style = """
+            <style>
+            [data-testid="stToolbar"] {visibility: hidden !important;}
+            footer {visibility: hidden !important;}
+            </style>
+            """
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 if __name__ == "__main__":
     main()
